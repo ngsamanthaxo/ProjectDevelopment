@@ -1,19 +1,17 @@
-// Still a W.I.P
-
 import java.sql.*;
-import java.util.Arrays;
-
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 public class Search extends DatabaseHelper {
 	public static void main(String[] args) {
-		//simpleSearch();
-		advancedSearch();
+		simpleSearch();
+		//advancedSearch();
 	}
-	public static String[] simpleSearch() {
+	public static ArrayList<Product> simpleSearch() {
 		String url = "jdbc:sqlserver://POWERCORE:1433;databaseName=ecommerce;integratedSecurity=true";
-		String[] uniqueResults = null;
 		Connection c;
 		String searchTerm = "%Shoes%";
+		ArrayList<Product> products = new ArrayList<Product>();
+		Product product;
 		try {
 			c = DriverManager.getConnection(url);
 			String s = "SELECT DISTINCT * FROM Products WHERE Category LIKE ?";
@@ -21,40 +19,46 @@ public class Search extends DatabaseHelper {
 			statement.setString(1, searchTerm);
 			ResultSet rs = statement.executeQuery();
 			while (rs.next()) {
-				String[] results = {rs.getString("Serial_Number"),
-						rs.getString("Product_Name"),
-						rs.getString("Gender"),
-						rs.getString("Price"),
-						rs.getString("Category"),
-						rs.getString("SubCategory"),
-						rs.getString("Product_Description"),
-						rs.getString("Manufacturer"),
-						rs.getString("Supplier")
-				};
-				uniqueResults = Arrays.stream(results).distinct().toArray(String[]::new);
-				System.out.println(Arrays.toString(uniqueResults));
+				product = new Product();
+				product.setSerialNumber(rs.getString("Serial_Number"));
+				product.setProductName(rs.getString("Product_Name"));
+				product.setGender(rs.getString("Gender"));
+				product.setPrice(rs.getDouble("Price"));
+				product.setCategory(rs.getString("Category"));
+				product.setSubCategory(rs.getString("SubCategory"));
+				product.setProductDescription(rs.getString("Product_Description"));
+				product.setManufacturer(rs.getString("Manufacturer"));
+				product.setSupplier(rs.getString("Supplier"));	
+				products.add(product);
 			}
 			rs.close();
+			int i = 1;
+			for (Product d:products){
+				System.out.print(i+ "> "+d.getProductName() +"\t");
+				System.out.println(d.getSerialNumber());
+				i++;
+			}
 		}catch (Exception e) {
 			System.out.println(e);
 		}
-		return uniqueResults;
+		return products;
 	}
 
 	public static void advancedSearch() {
 		//Code similar to simpleSearch()
 		String searchTerm = null;
-		String[] uniqueResults = null;
-		getData(searchTerm, uniqueResults);
+		getData(searchTerm);
 	}
 
-	public static String[] getData(String searchTerm, String[] uniqueResults) {
+	public static ArrayList<Product> getData(String searchTerm) {
 		String url = "jdbc:sqlserver://POWERCORE:1433;databaseName=ecommerce;integratedSecurity=true";
 		Connection c;
 		String fieldNoString = JOptionPane.showInputDialog("Enter field number:");
 		int fieldNo = Integer.parseInt(fieldNoString);
 		searchTerm = JOptionPane.showInputDialog("Enter a search term: ");
 		String s = null;
+		ArrayList<Product> products = new ArrayList<Product>();
+		Product product;
 		switch (fieldNo) {
 		case 1:
 			s = "SELECT DISTINCT * FROM Products WHERE Product_Name LIKE ?";
@@ -86,24 +90,28 @@ public class Search extends DatabaseHelper {
 			statement.setString(1, searchTerm);
 			ResultSet rs = statement.executeQuery();
 			while (rs.next()) {
-				String[] results = {rs.getString("Serial_Number"),
-						rs.getString("Product_Name"),
-						rs.getString("Gender"),
-						rs.getString("Price"),
-						rs.getString("Category"),
-						rs.getString("SubCategory"),
-						rs.getString("Product_Description"),
-						rs.getString("Manufacturer"),
-						rs.getString("Supplier")
-				};
-				uniqueResults = Arrays.stream(results).distinct().toArray(String[]::new);
-				System.out.println(Arrays.toString(uniqueResults));
+				product = new Product();
+				product.setSerialNumber(rs.getString("Serial_Number"));
+				product.setProductName(rs.getString("Product_Name"));
+				product.setGender(rs.getString("Gender"));
+				product.setPrice(rs.getDouble("Price"));
+				product.setCategory(rs.getString("Category"));
+				product.setSubCategory(rs.getString("SubCategory"));
+				product.setProductDescription(rs.getString("Product_Description"));
+				product.setManufacturer(rs.getString("Manufacturer"));
+				product.setSupplier(rs.getString("Supplier"));	
+				products.add(product);
 			}
 			rs.close();
+			int i = 1;
+			for (Product d:products){
+				System.out.print(i+ "> "+d.getProductName() +"\t");
+				System.out.println(d.getSerialNumber());
+				i++;
+			}	
 		}catch (Exception e) {
 			System.out.println(e);
 		}
-		return uniqueResults;
+		return products;
 	}
 }
-
