@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/WebPageSS2.css" />
+<link rel="stylesheet" type="text/css" href="css/shop.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<title>I I remember</title>
+	
+</head>
+<body>
+<header>
+<section class="nav">
+	<nav>
+		<button style="float: left; font-size: 15px;"><a href="#home">Home</a></button>
+		<button style="float: left; font-size: 15px;" onclick="myFunction()" class="dropbtn"><a href="#home"><i class="fa fa-search" style="font-size:15px; text-align: center;"></i>Search</a></button>
+		<button style="font-size: 20px;"><a href="#home"><p class="COKE" style="float: left;">COLA</p><p class="GRAPPA" style="float: left;">&</p><p style="float: right;">GRAPPA</p> </a></button>
+		<button style="float:right; font-size: 15px;"><a href="#home"><i class="fa fa-shopping-cart" style="font-size:15px; text-align: center;"></i></a></button>
+		<button style="float:right; font-size: 15px; padding-left: 3%;"><a href="#home"><i class="material-icons" style="font-size:15px; text-align: center;">person</i>Login</a></button>
+	</nav>
+	<div id="myDropdown" class="dropdown-content">
+         <span class="input input--haruki" style="margin: 2em 1em 1em;">
+          <input class="input__field input__field--haruki" type="username" id="input-1" />
+          <label class="input__label input__label--haruki" for="input-2">
+            <span class="input__label-content input__label-content--haruki">Search</span>
+          </label>
+        </span>
+        <span class="input input--haruki" style="margin: 2em 1em 1em;">
+          <input type="submit" name="Search">
+          </label>
+        </span>
+    		<!-- <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> -->
+    	</div>
+	<nav>
+		<button style="font-size: 20px;" onclick="menFunc()" class="dropbtn"><a href="#Men">Men</a></button>
+		<button style="font-size: 20px;" onclick="womenFunc()" class="dropbtn"><a href="#Women">Women</a></button>
+	</nav>
+	<div id="Mendrop" class="dropdown-content" style="height: 300px;">
+    <div style="border-bottom: solid; border-bottom-color: white; text-align: left;";><h1>Categories</h1></div>
+    	<table class="Dmen" style="width:500px; text-align: left;">
+  			<tr>
+   				<td>Tops</td>
+    			<td>Bottoms</td>
+    			<td>Shoes</td>
+  			</tr>
+  			<tr>
+  			<td>
+  				<ul>Tees</ul>
+  				<ul>Tanks</ul>
+  			</td>
+  			<td>
+  				<ul>Jeans</ul>
+  				<ul>Joggers</ul>
+  			</td>
+  			<td style="text-align: left;">
+  				<ul>Boots</ul>
+  				<ul >Sneakers</ul>
+  			</td>
+  			</tr>
+		</table>
+    </div>
+    </div>
+    <div id="Womendrop" class="dropdown-content" style="height: 300px;">
+    <div style="border-bottom: solid; border-bottom-color: white; text-align: left;";>Categories</div>
+    	<table class="Dmen" style="width:500px; text-align: left;">
+  			  			<tr>
+   				<td>Tops</td>
+    			<td>Bottoms</td>
+    			<td>Shoes</td>
+  			</tr>
+  			<tr>
+  			<td>
+  				<ul>Tees</ul>
+  				<ul>Tanks</ul>
+  			</td>
+  			<td>
+  				<ul>Jeans</ul>
+  				<ul>Joggers</ul>
+  			</td>
+  			<td style="text-align: left;">
+  				<ul>Boots</ul>
+  				<ul >Sneakers</ul>
+  			</td>
+  			</tr>
+		</table>
+    </div>
+	</section>
+</header>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+function menFunc() {
+    document.getElementById("Mendrop").classList.toggle("show");
+}
+function womenFunc() {
+    document.getElementById("Womendrop").classList.toggle("show");
+}
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+<footer>
+<section class="foot">
+  <table style="">
+    <tr style="height: 10px; text-align: center;">
+      <td style="height: 50px;"><a href="">About Us</a></td>
+      <td><a href="">Careers</a></td>
+      <td><a href="">Help</a></td>
+      <td><a href="">Contact Us</a></td>
+    </tr>
+    <tr>
+      <td><a href="">A bit about us</a></td>
+      <td><a href="">HeadQuartor Jobs</a></td>
+      <td><a href="">Size Guide</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="">Social Responsibility</a></td>
+      <td><a href="">Retail Jobs</a></td>
+      <td><a href="">FAQ</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </section>
+</footer>
+</body>
+</html>

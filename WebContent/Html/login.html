@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/WebPageSS2.css" />
+<link rel="stylesheet" type="text/css" href="css/shop.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<title>I I remeber</title>
+	
+</head>
+<body>
+<header>
+<section class="nav">
+	<nav>
+		<button style="float: left; font-size: 15px;"><a href="#home">Home</a></button>
+		<button style="float: left; font-size: 15px;" onclick="myFunction()" class="dropbtn"><a href="#home"><i class="fa fa-search" style="font-size:15px; text-align: center;"></i>Search</a></button>
+		<button style="font-size: 20px;"><a href="#home"><p class="COKE" style="float: left;">COLA</p><p class="GRAPPA" style="float: left;">&</p><p style="float: right;">GRAPPA</p> </a></button>
+		<button style="float:right; font-size: 15px;"><a href="#home"><i class="fa fa-shopping-cart" style="font-size:15px; text-align: center;"></i></a></button>
+		<button style="float:right; font-size: 15px; padding-left: 3%;"><a href="login.html"><i class="material-icons" style="font-size:15px; text-align: center;">person</i>Login</a></button>
+	</nav>
+	<div id="myDropdown" class="dropdown-content">
+         <span class="input input--haruki" style="margin: 2em 1em 1em;">
+          <input class="input__field input__field--haruki" type="username" id="input-1" />
+          <label class="input__label input__label--haruki" for="input-2">
+            <span class="input__label-content input__label-content--haruki">Search</span>
+          </label>
+        </span>
+        <span class="input input--haruki" style="margin: 2em 1em 1em;">
+          <input type="submit" name="Search">
+          </label>
+        </span>
+    		<!-- <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> -->
+    	</div>
+	<nav>
+		<button style="font-size: 20px;" onclick="menFunc()" class="dropbtn"><a href="#Men">Men</a></button>
+		<button style="font-size: 20px;" onclick="womenFunc()" class="dropbtn"><a href="#Women">Women</a></button>
+	</nav>
+	<div id="Mendrop" class="dropdown-content" style="height: 300px;">
+    <div style="border-bottom: solid; border-bottom-color: white; text-align: left;";><h1>Categories</h1></div>
+    	<table class="Dmen" style="width:500px; text-align: left;">
+  			<tr>
+   				<td>Tops</td>
+    			<td>Bottoms</td>
+    			<td>Shoes</td>
+  			</tr>
+  			<tr>
+  			<td>
+  				<ul>Tees</ul>
+  				<ul>Tanks</ul>
+  			</td>
+  			<td>
+  				<ul>Jeans</ul>
+  				<ul>Joggers</ul>
+  			</td>
+  			<td style="text-align: left;">
+  				<ul>Boots</ul>
+  				<ul >Sneakers</ul>
+  			</td>
+  			</tr>
+		</table>
+    </div>
+    </div>
+    <div id="Womendrop" class="dropdown-content" style="height: 300px;">
+    <div style="border-bottom: solid; border-bottom-color: white; text-align: left;";><h1>Categories</h1></div>
+      <table class="Dmen" style="width:500px; text-align: left;">
+        <tr>
+          <td>Tops</td>
+          <td>Bottoms</td>
+          <td>Shoes</td>
+        </tr>
+        <tr>
+        <td>
+          <ul>Tees</ul>
+          <ul>Tanks</ul>
+        </td>
+        <td>
+          <ul>Jeans</ul>
+          <ul>Leggings</ul>
+        </td>
+        <td style="text-align: left;">
+          <ul>Boots</ul>
+          <ul >Sneakers</ul>
+        </td>
+        </tr>
+    </table>
+    </div>
+    </div>
+	</section>
+</header>
+<section class="bod" style="height: 100%">
+<div class="container" id="login-form">
+    <form method="POST">
+      <section>
+        <h1 class="nomargin-bottom" style="color: #e6e6e6;font: 'Roboto-Condensed'; font-style: 'bold';">LOGIN</h1>
+        <span class="input input--haruki">
+          <input class="input__field input__field--haruki" type="username" id="input-1" />
+          <label class="input__label input__label--haruki" for="input-2">
+            <span class="input__label-content input__label-content--haruki">Username</span>
+          </label>
+        </span>
+        <span class="input input--haruki">
+          <input class="input__field input__field--haruki" type="password" id="input-2" />
+          <label class="input__label input__label--haruki" for="input-2">
+            <span class="input__label-content input__label-content--haruki">Password</span>
+          </label>
+        </span>
+      </section>
+      </form>
+      <br><br>
+      <span>Not a member, <a id="reg">Register</a></span>
+      
+    </div><!-- /container -->
+    <div class="container" id="register-form">
+    <form method="POST">
+      <section>
+        <h1 class="nomargin-bottom" style="color: #e6e6e6;font: 'Roboto-Condensed'; font-style: 'bold';">REGISTER</h1>
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="text" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-1">
+            <span class="input__label-content input__label-content--jiro">First Name</span>
+          </label>
+        </span>
+        
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="text" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-2">
+            <span class="input__label-content input__label-content--jiro">Last Name</span>
+          </label>
+        </span>
+        <br>
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="text" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-1">
+            <span class="input__label-content input__label-content--jiro">Email</span>
+          </label>
+        </span>
+        
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="text" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-2">
+            <span class="input__label-content input__label-content--jiro">Confirm</span>
+          </label>
+        </span>
+        <br>
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="password" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-2">
+            <span class="input__label-content input__label-content--jiro">Password</span>
+          </label>
+        </span>
+        
+        <span class="input input--jiro">
+          <input class="input__field input__field--jiro" type="password" id="input-1" />
+          <label class="input__label input__label--jiro" for="input-2">
+            <span class="input__label-content input__label-content--jiro">Confirm</span>
+          </label>
+        </span>
+      </section>
+      </form>
+    </div>
+</section>
+<footer>
+  <table style="width: 100%; bottom: 0%;">
+    <tr style="height: 10px; text-align: center;">
+      <td style="height: 50px;"><a href="">About Us</a></td>
+      <td><a href="">Careers</a></td>
+      <td><a href="">Help</a></td>
+      <td><a href="">Contact Us</a></td>
+    </tr>
+    <tr>
+      <td><a href="">A bit about us</a></td>
+      <td><a href="">HeadQuartor Jobs</a></td>
+      <td><a href="">Size Guide</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="">Social Resposbility</a></td>
+      <td><a href="">Retail Jobs</a></td>
+      <td><a href="">FAQ</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</footer>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+  jQuery(document).ready(function(){
+    $("#Payment").hide();
+      $("#nxt").click(function(){
+        $("#register-form").fadeOut("1000");
+          $("#Payment").delay("slow").fadeIn("1000");
+                      });
+      $("#Backy").click(function(){
+        $("#Payment").fadeOut("1000");
+          $("#register-form").delay("slow").fadeIn("1000");
+                      });
+    var green = "#5CBE37";//correct input
+    var red   = "#F43D5A";//incorrect input
+    /* shorthand
+    //Use angular.js for this action
+var n = $("#example div").length;
+$("body").css("background", (n < 2) ? "green" : "orange");
+    */
+    if($("#input-1").value().length != 0){
+      $(".input__label--jiro::after").css("background", green)//set color to green or red
+    }
+    else{$(".input__label--jiro::after").css("background", red)}
+
+              });
+    </script>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+function menFunc() {
+    document.getElementById("Mendrop").classList.toggle("show");
+}
+function womenFunc() {
+    document.getElementById("Womendrop").classList.toggle("show");
+}
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+  jQuery(document).ready(function(){
+    $("#register-form").hide();
+      $("#reg").click(function(){
+        $("#login-form").fadeOut("1000");
+          $("#register-form").delay("slow").fadeIn("1000");
+                      });
+    var green = "#5CBE37";//correct input
+    var red   = "#F43D5A";//incorrect input
+    /* shorthand
+    //Use angular.js for this action
+var n = $("#example div").length;
+$("body").css("background", (n < 2) ? "green" : "orange");
+    */
+    if($("#input-1").value().length != 0){
+      $(".input__label--jiro::after").css("background", green)//set color to green or red
+    }
+    else{$(".input__label--jiro::after").css("background", red)}
+
+              });
+    </script>
+    <script src="scripts/js/classie.js"></script>
+    <script>
+      (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+          (function() {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function() {
+              return this.replace(rtrim, '');
+            };
+          })();
+        }
+
+        [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+          // in case the input is already filled..
+          if( inputEl.value.trim() !== '' ) {
+            classie.add( inputEl.parentNode, 'input--filled' );
+          }
+
+          // events:
+          inputEl.addEventListener( 'focus', onInputFocus );
+          inputEl.addEventListener( 'blur', onInputBlur );
+        } );
+
+        function onInputFocus( ev ) {
+          classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+          if( ev.target.value.trim() === '' ) {
+            classie.remove( ev.target.parentNode, 'input--filled' );
+          }
+        }
+      })();
+    </script>
+</body>
+</html>

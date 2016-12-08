@@ -1,0 +1,68 @@
+/*Html Background and Styles*/
+html{
+	background: url(../img/square.png) repeat;
+	background-color: #181d20;
+    align-content: center;
+    font-family: "Karla", Karla-Regular, sans-serif;
+}
+ul {
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 0px;
+    max-width: 1500px;
+}
+
+li {
+   position: relative;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    color: #DAA520;
+}
+div.nav{
+	background-color:;
+	padding: 10px 10px;
+	padding-top: 0px;
+    width: 1300px;
+}
+div.nav:hover{
+	background-color: #000000;
+}
+footer{
+    background-color: #ac8e56;
+    width: 1300px;
+    height: 180px;
+    text-align: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+@font-face {
+    font-family: 'Karla';
+    src: url('/Font/Karla-Regular.ttf');
+}
+input.cinfo{
+
+}
+h1{
+    font-size: 20px;
+}
+div.checkout{
+    background-color: #FAEBD7; 
+    width: 1300px;
+    text-align: center;
+
+}
